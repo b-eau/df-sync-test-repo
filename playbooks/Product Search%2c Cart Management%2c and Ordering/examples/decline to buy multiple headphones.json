@@ -1,0 +1,96 @@
+{
+  "name": "44fa1a28-be1f-4989-a02c-5386eaee70a1",
+  "actions": [ {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/06f50924-ac24-45e1-8b23-2804c0166702",
+      "action": "get_items",
+      "inputParameters": [ {
+        "name": "get_items input",
+        "value": {
+          "item": "headphones"
+        }
+      } ],
+      "outputParameters": [ {
+        "name": "get_items output",
+        "value": {
+          "results": [ "Google Headphones" ]
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "We have the Google Headphones. Would you like to add this to your cart?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Sure, please add two headphones"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+      "action": "add_to_shopping_cart",
+      "inputParameters": [ {
+        "name": "add_to_shopping_cart input",
+        "value": {
+          "item": "Google Headphones",
+          "quantity": 2
+        }
+      } ],
+      "outputParameters": [ {
+        "name": "add_to_shopping_cart output",
+        "value": {
+          "shopping_cart": {
+            "Google Headphones": 2
+          },
+          "status": "success"
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I've added two Google Headphones to your cart. Anything else?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "What do I have in my cart so far?"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+      "action": "view_shopping_cart",
+      "outputParameters": [ {
+        "name": "view_shopping_cart output",
+        "value": {
+          "shopping_cart": {
+            "Google Headphones": 2
+          },
+          "status": "success"
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "You have two Google Headphones in your cart. Would you like anything else?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "No I'm good"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Would you like to place an order?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "No thanks"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "User asked what headphones the store carries."
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent adds multiple headphones to the user's cart. User is done adding items to cart, but declines to place an order."
+  },
+  "displayName": "decline to buy multiple headphones",
+  "retrievalStrategy": "DEFAULT"
+}

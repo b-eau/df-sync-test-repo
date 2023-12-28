@@ -1,0 +1,46 @@
+{
+  "name": "fd25887b-4eaa-455c-a058-6465c844373e",
+  "displayName": "greeting-product-search",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  }, {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "I want to search for an item"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  }, {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "how about a new phone"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1702418236,
+    "nanos": 212382000
+  },
+  "languageCode": "en"
+}

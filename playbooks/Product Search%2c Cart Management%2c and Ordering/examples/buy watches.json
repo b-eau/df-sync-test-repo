@@ -1,0 +1,116 @@
+{
+  "name": "9a756f91-1a2e-4a83-87f5-118792510c88",
+  "actions": [ {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/06f50924-ac24-45e1-8b23-2804c0166702",
+      "action": "get_items",
+      "inputParameters": [ {
+        "name": "get_items input",
+        "value": {
+          "item": "watch"
+        }
+      } ],
+      "outputParameters": [ {
+        "name": "get_items output",
+        "value": {
+          "results": [ "Google Watch" ]
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "We have the Google Watch, would you like to add it to your cart?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "yeah add two of those for me"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+      "action": "add_to_shopping_cart",
+      "inputParameters": [ {
+        "name": "add_to_shopping_cart input",
+        "value": {
+          "item": "Google Watch",
+          "quantity": 2
+        }
+      } ],
+      "outputParameters": [ {
+        "name": "add_to_shopping_cart output",
+        "value": {
+          "shopping_cart": {
+            "Google Watch": 2
+          },
+          "status": "success"
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "You got it. I've added two Google Watches to your cart. Anything else?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Actually add one more"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+      "action": "add_to_shopping_cart",
+      "inputParameters": [ {
+        "name": "add_to_shopping_cart input",
+        "value": {
+          "item": "Google Watch",
+          "quantity": 1
+        }
+      } ],
+      "outputParameters": [ {
+        "name": "add_to_shopping_cart output",
+        "value": {
+          "shopping_cart": {
+            "Google Watch": 3
+          },
+          "status": "success"
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Sure, I've added one Google Watch to your cart. Anything else?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "No that's it, I'm ready to check out"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/d2ae710d-15d7-46d7-9458-8c9f00506234",
+      "action": "place_order",
+      "outputParameters": [ {
+        "name": "place_order output",
+        "value": {
+          "confirmation_number": "4PM7L321",
+          "shopping_cart": {
+            "Google Watch": 3
+          },
+          "status": "success"
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Okay, I've placed an order containing three Google Watches. Your confirmation number is 4PM7L321."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Customer wants to buy a watch."
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent added two Google Watches to the customer's cart. Customer asked to check out and the agent placed the order.",
+    "state": "OK"
+  },
+  "displayName": "buy watches",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_OK"
+}

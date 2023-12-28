@@ -1,0 +1,46 @@
+{
+  "name": "85282bb9-2992-4a59-b7ea-198dc54399b6",
+  "actions": [ {
+    "userUtterance": {
+      "text": "hi"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Hi, I'm your Google shopping assistant. I can help you search for items and place orders. How can I help you today?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I want to buy a phone"
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/playbooks/6c1a45e8-e30d-460d-9588-775214531ba3",
+      "playbookInput": {
+        "precedingConversationSummary": "Customer wants to buy a phone."
+      },
+      "playbookOutput": {
+        "executionSummary": "Customer added some items to their cart but declined to place an order.",
+        "state": "OK"
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Is there anything else that I can help you with today?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "That's all, thank you."
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Thanks for shopping with Google! Have a nice day."
+    }
+  } ],
+  "playbookOutput": {
+    "state": "OK"
+  },
+  "displayName": "buy phones",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_OK"
+}

@@ -1,0 +1,34 @@
+{
+  "name": "724d5c65-ba4e-4d7e-a1d6-7359ec2509f8",
+  "displayName": "product-search:unrelated-item",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "do you have any cars for sale?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  }, {
+    "userInput": {
+      "input": {
+        "text": {
+          "text": "sure, what watches do you have?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+    
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1702418172,
+    "nanos": 223461000
+  },
+  "languageCode": "en"
+}

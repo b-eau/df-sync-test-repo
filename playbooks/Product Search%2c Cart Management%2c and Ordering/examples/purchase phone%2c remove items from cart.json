@@ -1,0 +1,144 @@
+{
+  "name": "38bb4901-a970-496f-a291-3828b1d670eb",
+  "actions": [ {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/06f50924-ac24-45e1-8b23-2804c0166702",
+      "action": "get_items",
+      "inputParameters": [ {
+        "name": "get_items input",
+        "value": {
+          "item": "phone"
+        }
+      } ],
+      "outputParameters": [ {
+        "name": "get_items output",
+        "value": {
+          "results": [ "Google Pixel 7", "Google Pixel 8" ]
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "We have the Google Pixel 7 and Google Pixel 8. Would you like to add one to your cart?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Yes add the 7"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+      "action": "add_to_shopping_cart",
+      "inputParameters": [ {
+        "name": "add_to_shopping_cart input",
+        "value": {
+          "item": "Google Pixel 7",
+          "quantity": 1
+        }
+      } ],
+      "outputParameters": [ {
+        "name": "add_to_shopping_cart output",
+        "value": {
+          "shopping_cart": {
+            "Google Pixel 7": 1
+          },
+          "status": "success"
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Okay, I've added one Google Pixel 7 to your cart. Anything else?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Add two pairs of Google Headphones as well"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+      "action": "add_to_shopping_cart",
+      "inputParameters": [ {
+        "name": "add_to_shopping_cart input",
+        "value": {
+          "item": "Google Headphones",
+          "quantity": 2
+        }
+      } ],
+      "outputParameters": [ {
+        "name": "add_to_shopping_cart output",
+        "value": {
+          "shopping_cart": {
+            "Google Headphones": 2,
+            "Google Pixel 7": 1
+          },
+          "status": "success"
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Sure, I've added two Google Headphones to your cart. Anything else?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Actually remove one headphone from my cart, I don't want it anymore"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+      "action": "remove_from_shopping_cart",
+      "inputParameters": [ {
+        "name": "remove_from_shopping_cart input",
+        "value": {
+          "item": "Google Headphones",
+          "quantity": 1
+        }
+      } ],
+      "outputParameters": [ {
+        "name": "remove_from_shopping_cart output",
+        "value": {
+          "shopping_cart": {
+            "Google Headphones": 1,
+            "Google Pixel 7": 1
+          },
+          "status": "success"
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Got it. I removed one Google Headphones from your cart. Anything else?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I'm ready to place an order"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/d2ae710d-15d7-46d7-9458-8c9f00506234",
+      "action": "place_order",
+      "outputParameters": [ {
+        "name": "place_order output",
+        "value": {
+          "confirmation_number": "68L23NM1",
+          "shopping_cart": {
+            "Google Headphones": 1,
+            "Google Pixel 7": 1
+          },
+          "status": "success"
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I've placed an order containing one Google Pixel 7 and one Google Headphones. Your confirmation number is 68L23NM1."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "User would like to purchase a phone."
+  },
+  "displayName": "purchase phone, remove items from cart",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_PENDING"
+}

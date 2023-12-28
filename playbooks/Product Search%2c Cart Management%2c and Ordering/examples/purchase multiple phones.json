@@ -1,0 +1,141 @@
+{
+  "name": "06c692f6-2c41-4b2b-9b69-124d6d3a984f",
+  "actions": [ {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/06f50924-ac24-45e1-8b23-2804c0166702",
+      "action": "get_items",
+      "inputParameters": [ {
+        "name": "get_items input",
+        "value": {
+          "item": "Phone"
+        }
+      } ],
+      "outputParameters": [ {
+        "name": "get_items output",
+        "value": {
+          "results": [ "Google Phone Pixel 8", "Google Phone Pixel 7" ]
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "We have the Google Phone Pixel 8, and Google Phone Pixel 7, would you like to purchase one of these?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Let's add a Google Pixel 8 to my cart"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+      "action": "add_to_shopping_cart",
+      "inputParameters": [ {
+        "name": "add_to_shopping_cart input",
+        "value": {
+          "item": "Google Pixel 8",
+          "quantity": 1
+        }
+      } ],
+      "outputParameters": [ {
+        "name": "add_to_shopping_cart output",
+        "value": {
+          "shopping_cart": {
+            "Google Pixel 8": 1
+          },
+          "status": "success"
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "You got it. I've added one Google Pixel 8 to your cart. Anything else?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Add two Pixel 7 as well please"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+      "action": "add_to_shopping_cart",
+      "inputParameters": [ {
+        "name": "add_to_shopping_cart input",
+        "value": {
+          "item": "Google Pixel 7",
+          "quantity": 2
+        }
+      } ],
+      "outputParameters": [ {
+        "name": "add_to_shopping_cart output",
+        "value": {
+          "shopping_cart": {
+            "Google Pixel 7": 2,
+            "Google Pixel 8": 1
+          },
+          "status": "success"
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "You got it. I've added two Google Pixel 7 to your cart. Anything else?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Let's see my shopping cart."
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/80107e05-fd19-4df3-be2a-1324a426ac3f",
+      "action": "view_shopping_cart",
+      "outputParameters": [ {
+        "name": "view_shopping_cart output",
+        "value": {
+          "shopping_cart": {
+            "Google Pixel 7": 2,
+            "Google Pixel 8": 1
+          },
+          "status": "success"
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "You have two Google Pixel 7 and one Google Pixel 8 in your cart. Would you like to check out using this cart?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Yes place an order"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/d2ae710d-15d7-46d7-9458-8c9f00506234",
+      "action": "place_order",
+      "outputParameters": [ {
+        "name": "place_order output",
+        "value": {
+          "confirmation_number": "6W356Z9P",
+          "shopping_cart": {
+            "Google Pixel 7": 2,
+            "Google Pixel 8": 1
+          },
+          "status": "success"
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Okay, I've placed an order for you. Your order contains two Google Pixel 7 and one Google Pixel 8. Your confirmation number is 6W356Z9P."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Customer wants to buy a phone"
+  },
+  "playbookOutput": {
+    "executionSummary": "User added multiple items to their cart and confirmed placing an order. The agent placed the order.",
+    "state": "OK"
+  },
+  "displayName": "purchase multiple phones",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_OK"
+}

@@ -1,0 +1,52 @@
+{
+  "name": "49eb00ae-7703-4054-85b7-14fa42c15322",
+  "actions": [ {
+    "userUtterance": {
+      "text": "Hi, I want to get a new pair of headphones for my daughter."
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/playbooks/6c1a45e8-e30d-460d-9588-775214531ba3",
+      "playbookInput": {
+        "precedingConversationSummary": "User is looking to buy headphones."
+      },
+      "playbookOutput": {
+        "executionSummary": "User adds a pair of headphones to their cart and checks out."
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Is there anything else I can help you with today?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Actually I'd like to buy a new phone as well"
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/playbooks/6c1a45e8-e30d-460d-9588-775214531ba3",
+      "playbookInput": {
+        "precedingConversationSummary": "User would like to buy a phone."
+      },
+      "playbookOutput": {
+        "executionSummary": "User adds phone to cart, but declines to check out."
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Anything else I can help you with?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I'm done"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Thanks for shopping with Google! Have a nice day."
+    }
+  } ],
+  "displayName": "buy headphones and phone, multiple orders",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_PENDING",
+  "languageCode": "en"
+}

@@ -1,0 +1,63 @@
+{
+  "name": "86a4a3e1-031e-49e3-bcff-129112ffd183",
+  "actions": [ {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/06f50924-ac24-45e1-8b23-2804c0166702",
+      "action": "get_items",
+      "inputParameters": [ {
+        "name": "get_items input",
+        "value": {
+          "item": "car"
+        }
+      } ],
+      "outputParameters": [ {
+        "name": "get_items output",
+        "value": {
+          "results": [ ]
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Sorry, we don't have any related products. Is there anything else you'd like to find?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "yeah what about watches?"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/df-hackathon/locations/us-central1/agents/a2014d9c-ca9e-426d-9a8c-cc2962e84127/tools/06f50924-ac24-45e1-8b23-2804c0166702",
+      "action": "get_items",
+      "inputParameters": [ {
+        "name": "get_items input",
+        "value": {
+          "item": "watch"
+        }
+      } ],
+      "outputParameters": [ {
+        "name": "get_items output",
+        "value": {
+          "results": [ "Google Watch" ]
+        }
+      } ]
+    }
+  }, {
+    "agentUtterance": {
+      "text": "We have the Google Watch. Would you like to add one to your cart?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "No thanks"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "User asks about buying a car."
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent helps the user search for multiple products, but user declines to add to their cart."
+  },
+  "displayName": "multiple searches, product not found",
+  "retrievalStrategy": "DEFAULT",
+  "languageCode": "en"
+}
